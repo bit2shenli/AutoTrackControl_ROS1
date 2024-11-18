@@ -1,7 +1,9 @@
 <?xml version="1.0" ?>
 
+<!-- 用 xacro 编写 urdf -->
 <robot name="$(arg roboname)" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+  <!-- 定义常用变量(宏) -->
   <xacro:property name="PI" value="3.1415926835897931"/>
 
   <!-- base -->
@@ -42,6 +44,8 @@
   <xacro:property name="str_mass_ixx" value="0.012"/>
   <xacro:property name="str_mass_iyy" value="0.025"/>
   <xacro:property name="str_mass_izz" value="0.012"/> 
+  <!-- 定义常用变量(宏) -->
+
 
   <!--Car Body-->
   <link name="base_link">
@@ -65,8 +69,9 @@
     <parent link="base_link"/>
     <child link="main_mass"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
-  </joint>  
+  </joint>
 
+  <!-- 定义小车的质量和转动惯量 -->
   <link name="main_mass" type="fixed">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -78,7 +83,10 @@
     </inertial>
   </link>
 
-
+  <!-- 
+    continuous joint 是可以360°旋转的
+    revolute joint 是可以人为规定旋转角度的
+  -->
   <!--Rear Right Wheel-->
   <joint name="rear_right_wheel_joint" type="continuous">
     <parent link="base_link"/>
