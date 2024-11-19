@@ -2,13 +2,35 @@
 NUDT - 《地面无人平台自主控制》
 大作业：基于ROS通信的分布式多进程路径跟踪控制仿真系统
 
+
+``` bash
+# ROS1 车辆纯点跟踪控制演示视频
+通过百度网盘分享的文件：ROS1_Melodic exe.mp4
+链接：https://pan.baidu.com/s/1uV2-DglfKa8K_crLT1waZQ?pwd=ltdy 
+提取码：ltdy
+```
+
+**目录 (Table of Contents)**
+[TOC]
+
+# 0、环境还原
+- [ ] 待上传8G的VMWare Ubuntu 18.04（带有 ROS1 Melodic 环境）
+
+
+![](https://raw.githubusercontent.com/bit2shenli/AutoTrackControl_ROS1/refs/heads/main/png/VMWare%20Ubuntu%20ROS1%20Melodic%20EXE/1%20%E7%94%A8VMware%E6%89%93%E5%BC%80%E5%8D%B3%E5%8F%AF%E5%A4%8D%E7%8E%B0%E7%8E%AF%E5%A2%83.png)
+
+![](https://raw.githubusercontent.com/bit2shenli/AutoTrackControl_ROS1/refs/heads/main/png/VMWare%20Ubuntu%20ROS1%20Melodic%20EXE/2%20%E9%80%89%E6%8B%A9ovf%E6%96%87%E4%BB%B6.png)
+
+
+
+
 # 1、环境准备
 - VMware 17.01
 - Ubuntu 18.04
 - ROS1 Melodic
 - Python 2.7.17(Ubuntu 18.04 自带)
 
-# tips
+## tips
 注意 Ubuntu 和 ROS 版本的兼容性，ROS 的安装可以借助"鱼香 ROS"的脚本一键安装，可以省去很多不必要的麻烦
 ```shell
 wget http://fishros.com/install -O fishros && . fishro
